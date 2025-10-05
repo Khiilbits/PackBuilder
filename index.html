@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PackBuilder</title>
+    <style>
+      :root { --bg:#0b1020; --panel:#121933; --muted:#94a3b8; --accent:#7c3aed; --accent-2:#22c55e; }
+      html,body,#root { height:100%; margin:0; }
+      body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial; background:linear-gradient(180deg,#0b1020,#0b1020 30%,#0f172a); color:#e5e7eb; }
+      a { color: #a78bfa; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+      .title { font-size: 28px; font-weight: 800; letter-spacing:.3px; display:flex; gap:10px; align-items:center; }
+      .grid { display:grid; gap:16px; }
+      .collections { grid-template-columns: repeat(3,minmax(0,1fr)); }
+      .card { background: linear-gradient(180deg,#0f172a, #0f1b39); border:1px solid rgba(148,163,184,.15); border-radius:16px; padding:18px; box-shadow: 0 0 0 1px rgba(255,255,255,.02) inset; }
+      .card h3 { margin:0 0 6px 0; font-size:16px }
+      .card p { margin:0 0 10px 0; color:var(--muted); font-size:13px; }
+      .btn { padding:10px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.08); background:#0b122a; color:#fff; cursor:pointer; font-weight:600; }
+      .btn.primary { background: linear-gradient(180deg, #7c3aed, #5b21b6); border-color:#4c1d95; }
+      .panel { background: linear-gradient(180deg,#0f172a,#0f1b39); border:1px solid rgba(148,163,184,.15); border-radius:16px; padding:16px; }
+      .row { display:flex; gap:12px; align-items:center; }
+      .drop { border:2px dashed rgba(148,163,184,.35); border-radius:12px; padding:18px; text-align:center; background:rgba(15,23,42,.5); }
+      .badge { font-size:12px; padding:3px 8px; border-radius:999px; background: rgba(148,163,184,.15); color:#cbd5e1; }
+      .pill { border:1px solid rgba(148,163,184,.25); border-radius:999px; padding:6px 10px; font-size:12px; }
+      .col-3 { display:grid; grid-template-columns: 340px 1fr 340px; gap:16px; }
+      .preview { background:#0a0f22; border:1px solid rgba(148,163,184,.15); border-radius:12px; padding:8px; min-height:300px; display:flex; align-items:center; justify-content:center }
+      .hud { position: relative; width: 640px; height: 360px; background: radial-gradient(100% 80% at 50% 50%, rgba(255,255,255,.03), rgba(255,255,255,0)); border:1px solid rgba(148,163,184,.18); border-radius:8px; }
+      .hud .hotbar { position:absolute; left:50%; transform: translateX(-50%); bottom: 16px; width: 364px; height: 46px; border:1px dashed rgba(255,255,255,.12); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:12px; color:#a1a1aa }
+      .hud .hearts { position:absolute; left: 24px; bottom: 70px; width: 120px; height: 18px; border:1px dashed rgba(255,255,255,.12); border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:12px; color:#a1a1aa }
+      .hud .xp { position:absolute; left: 50%; transform: translateX(-50%); bottom: 64px; width: 400px; height: 10px; border:1px dashed rgba(255,255,255,.12); border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:12px; color:#a1a1aa }
+      .hud .horse { position:absolute; right: 24px; bottom: 70px; width: 160px; height: 36px; border:1px dashed rgba(255,255,255,.12); border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:12px; color:#a1a1aa; }
+      .list { display:grid; gap:8px; }
+      .list .item { display:flex; justify-content:space-between; align-items:center; background:rgba(2,6,23,.35); padding:10px; border:1px solid rgba(148,163,184,.12); border-radius:10px; }
+      .thumb { width: 64px; height: 24px; border:1px solid rgba(148,163,184,.25); border-radius:6px; background:#111827 }
+      .select { width:100%; padding:8px; border-radius:8px; background:#0a1022; color:#e5e7eb; border:1px solid rgba(148,163,184,.25); }
+      .muted { color: var(--muted); font-size:12px }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
